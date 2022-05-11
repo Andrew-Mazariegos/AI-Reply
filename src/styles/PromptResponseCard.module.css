@@ -1,0 +1,23 @@
+.card {
+    background-color: white;
+    width: 82%;
+    height: inherit;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 2px 2px 7px lightslategray;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.card .prompt {
+    margin-right: 24px;
+}
+
+.card strong {
+    margin-right: 10px;
+}
+
+.card span {
+    word-break: break-all;
+}

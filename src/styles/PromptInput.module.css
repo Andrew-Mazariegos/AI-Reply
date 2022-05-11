@@ -1,0 +1,52 @@
+.content {
+    width: 95%;
+    height: 95%;
+    flex: 1 1 10rem;
+    min-width: 18rem;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    justify-self: left;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.content textarea {
+    resize: none;
+    width: inherit;
+    height: inherit;
+    margin-bottom: 20px;
+}
+
+.content label {
+    margin-right: 10px;
+    font-weight: bold;
+    margin-left: 0px;
+}
+
+.content select {
+    border: 1px solid rgb(91, 95, 100);
+    background-color: white;
+    width: 25%;
+    min-width: 125px;
+}
+
+.content .buttonDiv {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.content button {
+    margin-top: 20px;
+    width: 60%;
+    border: none;
+    background-color: #1890ff;
+    color: white;
+    padding: 8px;
+    justify-self: center;
+    box-shadow: 3px 3px 14px lightslategray;
+    border-radius: 40px;
+    cursor: pointer;
+}
