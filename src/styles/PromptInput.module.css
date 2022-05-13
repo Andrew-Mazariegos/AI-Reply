@@ -7,8 +7,8 @@
     max-width: -moz-fit-content;
     max-width: fit-content;
     justify-self: left;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 10px;
+    margin-left: 40px;
 }
 
 .content textarea {
@@ -16,6 +16,8 @@
     width: inherit;
     height: inherit;
     margin-bottom: 20px;
+    min-height: fit-content;
+    max-height: 50vh;
 }
 
 .content label {
@@ -49,4 +51,14 @@
     box-shadow: 3px 3px 14px lightslategray;
     border-radius: 40px;
     cursor: pointer;
+}
+
+.content button:hover {
+    background-color: #037beb;
+}
+
+.content button:active {
+    background-color: #037beb;
+    transform: translateY(3px);
+    box-shadow: 3px 3px 6px rgb(64, 68, 73);
 }

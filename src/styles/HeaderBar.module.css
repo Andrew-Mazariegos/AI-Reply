@@ -1,16 +1,22 @@
 .header {
     position: absolute;
-    width: 100%;
+    min-width: 100vw;
     height: 70px;
     line-height: 70px;
     background-color: #001529;
     color: #1890ff;
     text-align: center;
     margin-bottom: 100px;
+    right: 0;
+    top: 0;
+    width: 100%;
 }
 
-.header h1 {
+.header > h1 {
     position: relative;
     margin-top: auto;
     margin-bottom: auto;
+    color: #1890ff;
+    font-size: 2em;
+    font-weight: 900;
 }

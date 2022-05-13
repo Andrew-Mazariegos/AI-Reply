@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import styles from "../styles/PromptInput.module.css";
+import { message } from "antd";
 
 const PromptInput = (props) => {
     const [selectedEngine, setSelectedEngine] = useState("text-curie-001");
@@ -72,7 +73,7 @@ const PromptInput = (props) => {
                 }
             });
         } else {
-            alert("Please enter a prompt.");
+            message.error("Please enter a prompt.");
         }
     };
 
