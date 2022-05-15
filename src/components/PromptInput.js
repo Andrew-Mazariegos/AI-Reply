@@ -6,6 +6,7 @@ import { message } from "antd";
 const PromptInput = (props) => {
     const [selectedEngine, setSelectedEngine] = useState("text-curie-001");
     const [enteredPrompt, setEnteredPrompt] = useState("");
+    const [enteredKey, setEnteredKey] = useState("");
 
     const onEngineSelectHandler = (event) => {
         setSelectedEngine(event.target.value);
@@ -15,8 +16,12 @@ const PromptInput = (props) => {
         setEnteredPrompt(event.target.value);
     };
 
+    const onEnteredKeyChangeHandler = (event) => {
+        setEnteredKey(event.target.value);
+    };
+
     const submitHandler = async () => {
-        if (enteredPrompt) {
+        if (enteredPrompt && enteredKey) {
             setEnteredPrompt("");
             const resp = await axios.post(
                 `https://api.openai.com/v1/engines/${selectedEngine}/completions`,
@@ -26,7 +31,7 @@ const PromptInput = (props) => {
                 },
                 {
                     headers: {
-                        Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+                        Authorization: `Bearer ${enteredKey}`,
                     },
                 }
             );
@@ -73,7 +78,11 @@ const PromptInput = (props) => {
                 }
             });
         } else {
-            message.error("Please enter a prompt.");
+            if (!enteredKey) {
+                message.error("Please enter the API key.");
+            } else {
+                message.error("Please enter a prompt.");
+            }
         }
     };
 
@@ -87,6 +96,16 @@ const PromptInput = (props) => {
                 onChange={onPromptChangeHandler}
                 value={enteredPrompt}
             />
+            <br />
+            <label htmlFor="key">API Key:</label>
+            <input
+                type="text"
+                onChange={onEnteredKeyChangeHandler}
+                required
+                value={enteredKey}
+            />
+            <br />
+            <br />
             <label htmlFor="engine">Select AI Engine:</label>
             <select name="engine" onChange={onEngineSelectHandler}>
                 <option value="text-curie-001">text-curie-001</option>

@@ -17,13 +17,17 @@
     height: inherit;
     margin-bottom: 20px;
     min-height: fit-content;
-    max-height: 50vh;
+    max-height: 40vh;
 }
 
 .content label {
     margin-right: 10px;
     font-weight: bold;
     margin-left: 0px;
+}
+
+.content input {
+    width: inherit;
 }
 
 .content select {
