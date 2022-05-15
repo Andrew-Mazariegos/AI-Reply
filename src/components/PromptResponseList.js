@@ -15,7 +15,7 @@ const PromptResponseList = (props) => {
                     />
                 ))}
             {(!props.responseList || props.responseList.length === 0) && (
-                <strong className={styles.title}>
+                <strong className={styles.message}>
                     No prompts have been submitted for responses yet.
                 </strong>
             )}

@@ -14,3 +14,8 @@
 .list .title {
     margin-left: 10px;
 }
+
+.list .message {
+    margin-left: 10px;
+    display: inline-block;
+}
